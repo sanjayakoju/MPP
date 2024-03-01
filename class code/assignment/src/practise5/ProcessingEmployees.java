@@ -1,0 +1,81 @@
+package practise5;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class ProcessingEmployees {
+	public static void main(String[] args)
+	{
+		// initialize array of Employees
+		Employee[] employees = {
+				new Employee("Jason", "Red", 5000, "IT"),
+				new Employee("Ashley", "Green", 7600, "IT"),
+				new Employee("Matthew", "Indigo", 3587.5, "Sales"),
+				new Employee("Indigo", "Indigo", 3587.5, "Sales"),
+				new Employee("Indra", "Matthew", 3587.5, "Sales"),
+				new Employee("James", "Indigo", 4700.77, "Marketing"),
+				new Employee("Luke", "Indigo", 6200, "IT"),
+				new Employee("Jason", "Blue", 3200, "Sales"),
+				new Employee("Wendy", "Brown", 4236.4, "Marketing")};
+
+		// get List view of the Employees
+		List<Employee> list = Arrays.asList(employees);
+
+		// display all Employees
+		System.out.println("Complete Employee list:");
+		list.stream().forEach(System.out::println);   //A method reference.
+		
+		//implement here
+		
+		System.out.println("================ 1 Ans ================");
+		// 1. Display the first Employee with a salary in the range of $4000-$6000
+		list.stream()
+				.filter(x -> x.getSalary() >= 4000 && x.getSalary() <= 6000)
+				.findFirst()
+				.ifPresent(System.out::println);;
+		
+		
+		System.out.println("================ 2 Ans ================");
+		
+		// 2. Print out all the distinct last names whose last name starts with “I”.
+		list.stream()
+			.filter(x -> x.getLastName().startsWith("I"))
+			.distinct()
+			.collect(Collectors.toList())
+			.forEach(System.out::println);
+		
+		System.out.println("================ 3 Ans ================");	
+		
+	// 3. Display Employees with salaries in the range of $4000-$6000 sorted into ascending order by department.
+		list.stream()
+		.filter(x -> x.getSalary() >= 4000 && x.getSalary() <= 6000)
+		.sorted(Comparator.comparing(Employee::getDepartment))
+		.collect(Collectors.toList())
+		.forEach(System.out::println);
+		
+		
+		System.out.println("================ 4 Ans ================");	
+		//4. Sort employees in descending order by the last name, then first name. 
+		list.stream()
+			.sorted(Comparator.comparing(Employee::getLastName).reversed().thenComparing(Employee::getFirstName).reversed())
+			.collect(Collectors.toList())
+			.forEach(System.out::println);
+		
+		System.out.println("================ 5 Ans ================");	
+		//5. Display last names of unique employees in sorted order.
+		list.stream()
+			.distinct()
+			.sorted(Comparator.comparing(Employee::getLastName))
+			.map(Employee::getLastName)
+			.collect(Collectors.toList())
+			.forEach(System.out::println);
+	}
+
+   
+//		
+} // end class ProcessingEmployees
+

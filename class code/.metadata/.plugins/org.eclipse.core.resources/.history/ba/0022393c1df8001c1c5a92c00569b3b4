@@ -1,0 +1,22 @@
+package frame;
+import javax.swing.JLabel;
+
+public class JPanel1 extends javax.swing.JPanel {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Create the panel.
+	 */
+	public JPanel1() {
+		setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setBounds(130, 104, 46, 14);
+		add(lblNewLabel);
+
+	}
+}

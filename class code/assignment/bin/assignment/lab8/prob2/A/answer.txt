@@ -1,0 +1,4 @@
+1.With the provided code, the return value of compare is zero, since it only compares two names which equal.
+2.The employee objects should be equal if and only if all the attributes in both the objects are equal.
+3. Employee object with name Joe and salary 50000 and another object with name Joe and salary 10000,
+ both objects have same name but to be equals they should have same salary therefore they can't be considered equal.

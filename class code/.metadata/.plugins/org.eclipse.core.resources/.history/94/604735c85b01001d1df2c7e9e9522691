@@ -1,0 +1,23 @@
+package assignment.lab11.prob1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) {
+		
+//		a. First fragment:
+		List<Integer> ints = new ArrayList<>();
+		ints.add(1);
+		ints.add(2);
+		List<Number> nums = ints; //This line create a compiler error
+//		nums.add(3.14);
+		
+//		b. Second fragment:
+			List<Integer> intss = new ArrayList<>();
+			ints.add(1);
+			ints.add(2);
+			List<? extends Number> numss = ints;
+			nums.add(3.14);
+	}
+}

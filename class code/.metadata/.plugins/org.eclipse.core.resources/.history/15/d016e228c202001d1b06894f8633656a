@@ -1,0 +1,19 @@
+package streamPractise;
+
+import java.math.BigInteger;
+import java.util.stream.Stream;
+
+public class EvenNumStream {
+
+	public static void main(String[] args) {
+		evenNumber(10);
+		
+	}	
+	
+	static void evenNumber(int n) {
+		Stream<Integer>  stream = Stream.iterate(0, x -> x + 2);
+		stream.limit(n)
+				.forEach(System.out::println);
+	}
+	
+}

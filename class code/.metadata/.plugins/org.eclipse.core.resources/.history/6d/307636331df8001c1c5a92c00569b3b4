@@ -1,0 +1,17 @@
+package frame;
+import javax.swing.JLabel;
+
+public class JPanel extends javax.swing.JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public JPanel() {
+		setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setBounds(130, 104, 46, 14);
+		add(lblNewLabel);
+
+	}
+}

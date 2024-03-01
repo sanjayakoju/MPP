@@ -1,0 +1,89 @@
+package practise7;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Department {
+
+	private String name;
+	private List<Person> pList;
+	
+	public Department(String name, List<Person> list) {
+		this.name = name;
+		this.pList = new ArrayList<>();
+		this.pList = list;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public List<Person> getpList() {
+		return pList;
+	}
+	public void setpList(List<Person> pList) {
+		this.pList = pList;
+	}
+	
+	
+	public double getTotalSalary() {
+		
+		double d = pList.stream()
+			 .flatMap(p -> p.getRoleList().stream())
+			 .filter(r -> r instanceof Staff || r instanceof Faculty)
+			 .map(Role::getSalary)
+			 .reduce(0.0, (x,y) -> x + y);
+
+		
+//		System.out.println("Total Salary : "+d);
+		
+//		double sum = 0;
+//		for(Person p : pList) {
+//			Person pp = p;
+//			List<Role> rList = p.getRoleList();
+//			for(Role r: rList) {
+//				if (r instanceof Staff || r instanceof Faculty) {
+//					sum =sum+ r.getSalary();
+//				}
+//			}
+//		}
+//		System.out.println("Total Salary Sum : "+sum);
+		return d;
+	}
+	
+	public void showAllMembers() {
+		pList.stream()
+			.forEach(System.out::println);
+//		for(Person p: pList) {
+//			System.out.println(p);
+//		}
+	}
+	
+	public void unitsPerFaculty() {
+		
+		pList.stream()
+		 .flatMap(p -> p.getRoleList().stream()
+				 .filter(r -> r instanceof Faculty);
+//				 .map(r->"Name :"+p.getName() +" Units : "+r.getUnits())
+//				 .reduce(null)));
+		
+//		for(Person p : pList) {
+//			List<Role> rList = p.getRoleList();
+//			for(Role r: rList) {
+//				if(r instanceof Faculty) {
+//					System.out.println("Name :"+p.getName() +" Units : "+r.getUnits());
+//				}
+//			}
+//			
+//		}
+	}
+	
+	public void showStudentsByFaculty(String name) {
+		pList.stream()
+			.flatMap(p -> p.getRoleList().stream())
+			.filter(x -> x.i)
+	}
+}

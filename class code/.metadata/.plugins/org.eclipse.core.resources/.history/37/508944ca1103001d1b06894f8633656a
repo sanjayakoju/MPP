@@ -1,0 +1,36 @@
+package practise7;
+
+import java.util.function.BiFunction;
+
+public class Prob1 {
+	
+	// Expression (x,y) -> Math.pow(x,y)
+	
+	// name and type of lambda goes here
+	BiFunction<Integer, Integer, Double> biFunction = (x,y) -> Math.pow(x, y);
+	
+	
+	// Method reference
+	BiFunction<Integer, Integer, Double> biFunctionB = Prob1::helper;
+	
+	
+	static double helper(Integer x, Integer y) {
+		return Math.pow(x, y);
+	}
+	
+	
+	static class LambdaStatic implements BiFunction<Integer, Integer, Double> {
+		
+		@Override
+		public Double apply(Integer x, Integer y) {
+			return Math.pow(x, y);
+		}
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		
+	}
+}

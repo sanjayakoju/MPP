@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commands>
+	<moveEntry
+		id="org.eclipse.wb.swing.components.menu javax.swing.JMenuItem"
+		category="org.eclipse.wb.swing.components"
+		nextEntry="org.eclipse.wb.swing.components javax.swing.JSeparator"/>
+	<editCategory
+		id="org.eclipse.wb.swing.components.menu"
+		name="Menu"
+		description="Menu components"
+		visible="true"
+		open="false"/>
+	<addComponent
+		id="custom_1656537792607"
+		name="JMenuItem"
+		visible="true"
+		class="javax.swing.JMenuItem"
+		category="org.eclipse.wb.swing.components.menu"/>
+	<addComponent
+		id="custom_1656538571573"
+		name="MenuItemUI"
+		visible="true"
+		class="javax.swing.plaf.MenuItemUI"
+		category="org.eclipse.wb.swing.components"/>
+	<removeEntry
+		id="custom_1656538571573"/>
+	<addComponent
+		id="custom_1656541518812"
+		name="JTabbedPane"
+		visible="true"
+		class="javax.swing.JTabbedPane"
+		category="org.eclipse.wb.swing.components"/>
+	<addComponent
+		id="custom_1656543120436"
+		name="JDesktopPane"
+		visible="true"
+		class="javax.swing.JDesktopPane"
+		category="org.eclipse.wb.swing.components"/>
+	<addComponent
+		id="custom_1656543611704"
+		name="DesktopPaneUI"
+		visible="true"
+		class="javax.swing.plaf.DesktopPaneUI"
+		category="org.eclipse.wb.swing.components.awt"/>
+	<addComponent
+		id="custom_1656544558616"
+		name="SwingContainerOrderFocusTraversalPolicy"
+		visible="true"
+		class="javax.swing.SwingContainerOrderFocusTraversalPolicy"
+		category="org.eclipse.wb.swing.containers"/>
+	<removeEntry
+		id="custom_1656544558616"/>
+</commands>

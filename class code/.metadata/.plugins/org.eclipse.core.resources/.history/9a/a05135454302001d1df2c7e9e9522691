@@ -1,0 +1,8 @@
+package streamPractise;
+
+public class EvenNumStream {
+
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,7 @@
+List<Object> objs = new ArrayList<>();
+objs.add(1);
+objs.add("two");
+List<? super Integer> ints = objs;
+ints.add(3);
+double dbl = sum(ints); // required Collection<? extends Number> which only accept collection of subtype of Number
+// whereas ints is collection of supertype of Integer

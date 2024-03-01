@@ -1,0 +1,16 @@
+package streamPractise;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class OptionalDemo {
+
+	public static void main(String[] args) {
+		List<String> names = Arrays.asList("Sanjaya", "Hari", "Omkar", "rahul");
+		
+	    Optional<T> names.stream()
+			 .filter(name -> name.startsWith("S"))
+			 .findFirst();
+	}
+}

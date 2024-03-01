@@ -1,0 +1,15 @@
+package streamPractise;
+
+import java.math.BigInteger;
+import java.util.function.Consumer;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+public class EvenNumStream {
+
+	public static void main(String[] args) {
+		
+		IntStream s = IntStream.iterate(0, x-> x +2).limit(4);
+		System.out.println(s);
+	}
+}

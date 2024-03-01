@@ -1,0 +1,8 @@
+package streamPractise;
+
+public class SummaryStatisticsDemo {
+
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,18 @@
+package assignment.functionalInterface;
+
+import java.util.function.BiFunction;
+
+public class FInterface implements BiFunction<T, U, R> {
+
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+	@Override
+	public R apply(T t, U u) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

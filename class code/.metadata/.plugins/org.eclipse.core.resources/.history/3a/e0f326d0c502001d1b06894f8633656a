@@ -1,0 +1,32 @@
+package streamPractise;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Maximal {
+
+	public static void main(String[] args) {
+		List<Integer> list = Arrays.asList(50,8,4,9,11,25,1,19,7,29);
+		System.out.println(max(list, 2, 6));
+	}
+	
+	static <T extends Comparable<T>> T max(List<T> list, int b, int e) {
+		
+		List<Integer> l = new ArrayList<>();
+		for (int i= b;i<=e; i++ ) {
+			l.add(list.get(i));
+		}
+		System.out.println(Arrays.toString(l));
+		
+		T max =  (T) l.get(0);
+		 for(T i : l) {
+			 if(i.compareTo(max) > 0) {
+				 max = i;
+			 }
+		 }
+			
+		
+		return max;
+	}
+}

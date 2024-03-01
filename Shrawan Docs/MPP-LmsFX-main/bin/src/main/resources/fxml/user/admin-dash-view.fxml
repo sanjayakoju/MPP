@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpp.librarysys.javafx.controllers.AdminFxController">
+    <children>
+      <ScrollPane HBox.hgrow="ALWAYS">
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+         <content>
+              <VBox alignment="CENTER">
+                  <children>
+                  <TabPane fx:id="adminMainTabPane" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" tabMinHeight="50.0" tabMinWidth="100.0" VBox.vgrow="ALWAYS">
+                    <tabs>
+                      <Tab text="Members">
+                        <content>
+                          <AnchorPane>
+                                 <children>
+                                    <TabPane fx:id="membersTabPane" layoutX="10.0" layoutY="25.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="25.0">
+                                      <tabs>
+                                        <Tab fx:id="allMemberTabBtn" closable="false" text="All Members">
+                                          <content>
+                                            <AnchorPane fx:id="allMembersAnchorPane">
+                                                   <padding>
+                                                      <Insets top="30.0" />
+                                                   </padding></AnchorPane>
+                                          </content>
+                                        </Tab>
+                                        <Tab text="Add Member">
+                                          <content>
+                                            <AnchorPane>
+                                                <fx:include source="add-member.fxml" AnchorPane.bottomAnchor="30.400000000000034" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="97.60000000000002" AnchorPane.topAnchor="0.0" />
+                                                   <padding>
+                                                      <Insets top="30.0" />
+                                                   </padding>
+                                            </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                    <MenuBar layoutX="502.0" layoutY="1.0">
+                                      <menus>
+                                        <Menu mnemonicParsing="false" text="Options">
+                                          <items>
+                                            <MenuItem fx:id="menuItemLogoutBtn" mnemonicParsing="false" text="Logout" />
+                                          </items>
+                                        </Menu>
+                                        <Menu mnemonicParsing="false" text="Help">
+                                          <items>
+                                            <MenuItem mnemonicParsing="false" text="About" />
+                                          </items>
+                                        </Menu>
+                                      </menus>
+                                    </MenuBar>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Books">
+                           <content>
+                              <AnchorPane>
+                                 <children>
+                                    <TabPane fx:id="bookTabPane" layoutX="10.0" layoutY="25.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="25.0">
+                                       <tabs>
+                                          <Tab fx:id="allBookTabBtn" text="All Books">
+                                             <content>
+                                                <AnchorPane>
+                                                   <padding>
+                                                      <Insets top="30.0" />
+                                                   </padding></AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Add Books">
+                                             <content>
+                                                <AnchorPane>
+                                                    <fx:include fx:id="addBook" source="add-book.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                   <padding>
+                                                      <Insets top="30.0" />
+                                                   </padding>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                       </tabs>
+                                    </TabPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+                  </children>
+              </VBox>
+         </content>
+      </ScrollPane>
+    </children>
+</HBox>
